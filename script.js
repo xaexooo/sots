@@ -12,11 +12,11 @@ document.addEventListener('DOMContentLoaded', function() {
   // Add menu items to the container
   menuContainer.innerHTML = `
     <div class="menu-items">
-      <a href="index.html">Главная</a>
-      <a href="/sots/keyboards/keyboards.html">Клавиатуры</a>
-      <a href="/sots/mices/mices.html">Мыши</a>
-      <a href="/sots/headphones/headphones.html">Гарнитура</a>
-      <a href="/sots/games/games.html">Игры</a>
+      <a href="../index.html">Главная</a>
+      <a href="../keyboards/keyboards.html">Клавиатуры</a>
+      <a href="../mices/mices.html">Мыши</a>
+      <a href="../headphones/headphones.html">Гарнитура</a>
+      <a href="../games/games.html">Игры</a>
       <a href="cart.html">Корзина</a>
     </div>
   `;
