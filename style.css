@@ -1,0 +1,144 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+a{text-decoration: none;transition: 0.4s;&:hover{opacity: 0.7;}}
+body{
+    width: 100%;height: 100%;
+    display: flex;justify-content: center;
+    background-color: #1A1919;
+}
+.holder{
+    width: 80%;
+    height: 2000px;display:flex;flex-flow: column wrap;
+}
+header{
+    display: flex;flex-flow: row wrap;
+    width: 100%;
+    height: 50px;align-items: center;
+}
+#techform{font-family: 'Bahnschrift';font-size: 12pt;color: white;padding:3px 15px 3px 15px;border-radius: 20px;}
+.headerholder{margin-left: auto;display: flex;flex-direction: row;gap: 20px;align-items: center;}
+#search{width: 18px;height: 18px;margin-top: 2px;}
+.double{
+    width: 100px;height: 28px;
+    border-radius: 20px;flex-direction: row;
+    display: flex;align-items: center;
+    justify-content: space-around;
+}
+#burger{cursor: pointer;transition: 0.4s;&:hover{opacity: 0.7;}}
+#cart{margin-top: 2.5px;}
+.sea{width: 28px;height: 28px;display: flex;flex-direction: row;align-items: center;justify-content: center;border-radius: 20px;}
+.banner{
+    width: 100%;height: 40%;border-radius: 70px;margin-top: 3%;
+    display: flex;flex-flow: column wrap;align-items: center;justify-content: center;
+}
+.boxholder{
+    width: 100%;height: 20%;display: flex;
+    flex-flow: row wrap;align-items: center;justify-content: space-around;
+    margin-top: 4%;gap: 2%;
+}
+.box1,.box2,.box3,.box4{
+    width: 23%;height: 100%;display: flex;
+    flex-flow: column wrap;border-radius: 70px;
+    align-items: center;justify-content: end;
+}
+#keyboards,#mices,#headphones,#games{
+    color: white;font-family: 'Bahnschrift';
+    font-size: 20px;margin-bottom: 2%;
+}
+#keyb{max-width: 80%;max-height: 30%;margin-top: 10%;}
+#style{color: #fff;font-family: 'Bahnschrift';font-size: 4vw;margin-top: 7%;}
+#mchose{color: #fff;font-family: 'Bahnschrift';font-size: 3vw;}
+#perc{max-width: 90%;max-height: 90%;margin-right: 5%;}
+#skyrox{max-width: 55%;max-height: 50%;margin-bottom: 20%;}
+#headp{max-width: 90%;max-height: 90%;}
+#rdr2{max-width: 60%;max-height: 60%;margin-bottom: 15%;}
+.sumwithdel{
+    width: 100%;height: 25%;margin-top: 5%;border-radius: 50px;
+    display: flex;flex-flow: row wrap;align-items: center;
+}
+#deliv{height: 30%;margin-left: 5%;}
+#del{color: #fff;font-family: 'Bahnschrift';font-size: 40px;margin-left: 2%;}
+#techform,.double,.sea,.banner,.box1,.box2,.box3,.box4,.sumwithdel{
+    background: linear-gradient(135deg,#ffffff1a,#ffffff00);
+    backdrop-filter: blur(10px);-webkit-backdrop-filter: blur(10px);
+    border: 1px solid #ffffff2e;
+    box-shadow: 0 5px 20px 0 #0000005e;
+}
+#cat{display: none;}
+@media(max-width:1570px){
+    .box1,.box2,.box3,.box4{
+        width: 23%;height: 100%;border-radius: 20px;
+        align-items: center;justify-content: end;
+    }
+}
+@media(max-width:768px){
+    .holder{width: 95%;}
+    .banner{height: 30%;border-radius: 30px;justify-content: center;align-items: center;}
+    .boxholder{
+        width: 100%;height: 20%;display: flex;
+        flex-flow: row wrap;align-items: center;justify-content: space-around;
+        margin-top: 4%;gap: 2%;
+    }
+    .box1,.box2,.box3,.box4{
+        width: 48%;height: 48%;border-radius: 20px;
+        align-items: center;justify-content: end;
+    }
+    .sumwithdel{
+        width: 100%;height: 25%;margin-top: 5%;border-radius: 30px;
+        display: flex;flex-flow: row wrap;align-items: center;
+    }
+    #deliv{max-height: 20%;margin-left: 5%;}
+    #del{color: #fff;font-family: 'Bahnschrift';font-size: 25px;margin-left: 2%;}
+}
+@media(max-width:550px){
+    #cat{display: flex;width: 350px;margin-top: 20px;}
+}
+#burger {
+    width: 24px;
+    height: 18px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .menu-container {
+    position: fixed;
+    top: 50px;
+    right: 10%;
+    width: 250px;
+    background: linear-gradient(135deg, #ffffff1a, #ffffff00);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid #ffffff2e;
+    box-shadow: 0 5px 20px 0 #0000005e;
+    border-radius: 20px;
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .menu-items {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+  .menu-items a {
+    color: white;
+    font-family: 'Bahnschrift';
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin: 5px 0;
+    transition: 0.3s;
+  }
+  .menu-items a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 1;
+  }
+  @media (max-width: 768px) {
+    .menu-container {
+      width: 200px;
+      right: 2.5%;
+    }
+  }

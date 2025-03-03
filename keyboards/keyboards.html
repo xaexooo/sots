@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="keyboards.css">
+  <title>Клавиатуры - TechSum</title>
+  <script src="../script.js"></script>
+</head>
+<body>
+  <div class="holder">
+
+    <header>
+      <a href="../index.html" id="techform">TechSum</a>
+      <div class="headerholder">
+        <div class="sea"><a href="../search.html"><img src="../imgs/search.png" id="search"></a></div>
+        <div class="double">
+          <a href="../cart.html"><img src="../imgs/cart.png" id="cart"></a>
+          <img src="../imgs/burger.png" id="burger">
+        </div>
+      </div>
+    </header>
+
+
+    <div class="category-header">
+      <h1>Клавиатуры</h1>
+      <div class="filter-controls">
+        <select id="sort-by">
+          <option value="popular">По популярности</option>
+          <option value="price-low">Цена (низкая-высокая)</option>
+          <option value="price-high">Цена (высокая-низкая)</option>
+          <option value="newest">Новинки</option>
+        </select>
+        <div class="view-options">
+          <button class="view-btn active" data-view="grid"><img src="../imgs/grid-view.png" alt="Grid View"></button>
+          <button class="view-btn" data-view="list"><img src="../imgs/list-view.png" alt="List View"></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filters sidebar and products container -->
+    <div class="products-layout">
+      <!-- Filters sidebar -->
+      <div class="filters-sidebar">
+        <div class="filter-group">
+          <h3>Тип</h3>
+          <label><input type="checkbox" name="type" value="mechanical"> Механические</label>
+          <label><input type="checkbox" name="type" value="membrane"> Мембранные</label>
+          <label><input type="checkbox" name="type" value="optical"> Оптические</label>
+        </div>
+        
+        <div class="filter-group">
+          <h3>Бренд</h3>
+          <label><input type="checkbox" name="brand" value="logitech"> Logitech</label>
+          <label><input type="checkbox" name="brand" value="razer"> Razer</label>
+          <label><input type="checkbox" name="brand" value="hyperx"> HyperX</label>
+          <label><input type="checkbox" name="brand" value="steelseries"> SteelSeries</label>
+          <label><input type="checkbox" name="brand" value="corsair"> Corsair</label>
+        </div>
+        
+        <div class="filter-group">
+          <h3>Цена</h3>
+          <div class="price-range">
+            <input type="number" id="price-min" placeholder="От">
+            <span>-</span>
+            <input type="number" id="price-max" placeholder="До">
+            <button id="price-apply">OK</button>
+          </div>
+        </div>
+        
+        <div class="filter-group">
+          <h3>Раскладка</h3>
+          <label><input type="checkbox" name="layout" value="full"> Полная</label>
+          <label><input type="checkbox" name="layout" value="tkl"> TKL</label>
+          <label><input type="checkbox" name="layout" value="60"> 60%</label>
+        </div>
+        
+        <button id="reset-filters">Сбросить фильтры</button>
+      </div>
+
+      <!-- Products grid -->
+      <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/api/placeholder/300/200" alt="Клавиатура 1">
+            <div class="product-tags">
+              <span class="tag new">Новинка</span>
+              <span class="tag sale">-15%</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Logitech G Pro X</h3>
+            <p class="product-desc">Механическая игровая клавиатура с переключателями GX Blue</p>
+            <div class="product-price">
+              <span class="current-price">12 990 ₸</span>
+              <span class="old-price">15 290 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart">В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/api/placeholder/300/200" alt="Клавиатура 2">
+            <div class="product-tags">
+              <span class="tag bestseller">Хит</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Razer Huntsman Mini</h3>
+            <p class="product-desc">60% оптико-механическая клавиатура с RGB-подсветкой</p>
+            <div class="product-price">
+              <span class="current-price">9 990 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart">В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/api/placeholder/300/200" alt="Клавиатура 3">
+          </div>
+          <div class="product-info">
+            <h3>HyperX Alloy Origins Core</h3>
+            <p class="product-desc">TKL механическая клавиатура с переключателями HyperX Red</p>
+            <div class="product-price">
+              <span class="current-price">8 490 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart">В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/api/placeholder/300/200" alt="Клавиатура 4">
+            <div class="product-tags">
+              <span class="tag sale">-20%</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>SteelSeries Apex Pro</h3>
+            <p class="product-desc">Механическая клавиатура с регулируемыми переключателями</p>
+            <div class="product-price">
+              <span class="current-price">16 990 ₸</span>
+              <span class="old-price">21 490 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart">В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/api/placeholder/300/200" alt="Клавиатура 5">
+          </div>
+          <div class="product-info">
+            <h3>Corsair K70 RGB</h3>
+            <p class="product-desc">Полноразмерная механическая клавиатура с подсветкой RGB</p>
+            <div class="product-price">
+              <span class="current-price">14 590 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart">В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/api/placeholder/300/200" alt="Клавиатура 6">
+            <div class="product-tags">
+              <span class="tag new">Новинка</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Ducky One 2 Mini</h3>
+            <p class="product-desc">60% механическая клавиатура с двойным PBT</p>
+            <div class="product-price">
+              <span class="current-price">11 290 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart">В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+      <a href="#" class="active">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#" class="next">Следующая →</a>
+    </div>
+
+    <!-- Similar to bottom of your main page -->
+    <div class="sumwithdel">
+      <img src="../imgs/deliv.png" id="deliv">
+      <p id="del">Доставляем во все точки QazPost казахстана</p>
+    </div>
+  </div>
+
+  <!-- Load cart.js after the DOM is loaded -->
+  <script src="../cart.js"></script>
+</body>
+</html>
