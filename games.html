@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="games/games.css">
+  <title>Игры - TechSum</title>
+</head>
+<body>
+  <div class="holder">
+    <header>
+      <a href="index.html" id="techform">TechSum</a>
+      <div class="headerholder">
+        <div class="sea">
+          <a href="search.html">
+            <img src="imgs/search.png" alt="Поиск" id="search">
+          </a>
+        </div>
+        <div class="double">
+          <a href="cart.html">
+            <img src="imgs/cart.png" alt="Корзина" id="cart">
+          </a>
+          <img src="imgs/burger.png" alt="Меню" id="burger">
+        </div>
+      </div>
+    </header>
+
+    <div class="category-header">
+      <h1>Игры</h1>
+      <div class="filter-controls">
+        <select id="sort-by">
+          <option value="popular">По популярности</option>
+          <option value="price-low">Цена (низкая-высокая)</option>
+          <option value="price-high">Цена (высокая-низкая)</option>
+          <option value="newest">Новинки</option>
+        </select>
+        <div class="view-options">
+          <button class="view-btn active" data-view="grid">
+            <img src="imgs/grid-view.png" alt="Grid View">
+          </button>
+          <button class="view-btn" data-view="list">
+            <img src="imgs/list-view.png" alt="List View">
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="products-layout">
+      <div class="filters-sidebar">
+        <button class="filter-toggle" id="filter-toggle">Фильтры</button>
+        <div class="filters-content">
+          <div class="filter-group">
+            <h3>Тип</h3>
+            <label><input type="checkbox" name="type" value="arcade"> Аркада</label>
+            <label><input type="checkbox" name="type" value="action"> Экшен</label>
+            <label><input type="checkbox" name="type" value="online"> Онлайн</label>
+            <label><input type="checkbox" name="type" value="open-world"> С открытым миром</label>
+          </div>
+          
+          <div class="filter-group">
+            <h3>Разработчики</h3>
+            <label><input type="checkbox" name="brand" value="ea"> EA Games</label>
+            <label><input type="checkbox" name="brand" value="rockstar"> Rockstar</label>
+            <label><input type="checkbox" name="brand" value="ubisoft"> Ubisoft</label>
+            <label><input type="checkbox" name="brand" value="criterion"> Criterion</label>
+            <label><input type="checkbox" name="brand" value="2k"> 2K</label>
+            <label><input type="checkbox" name="brand" value="microsoft"> Microsoft</label>
+          </div>
+          
+          <div class="filter-group">
+            <h3>Цена</h3>
+            <div class="price-range">
+              <input type="number" id="price-min" placeholder="От">
+              <span>-</span>
+              <input type="number" id="price-max" placeholder="До">
+              <button id="price-apply">OK</button>
+            </div>
+          </div>        
+          <button id="reset-filters">Сбросить фильтры</button>
+        </div>
+      </div>
+
+      <div class="products-grid">
+        <!-- Game 1 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="games/fifa.png" alt="FIFA 23">
+            <div class="product-tags">
+              <span class="tag bestseller">Хит</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>FIFA 23</h3>
+            <p class="product-desc">Футбольный симулятор от EA Sports</p>
+            <div class="product-price">
+              <span class="current-price">14 990 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart" onclick='addToCart({id:301, name:"FIFA 23", price:14990, quantity:1})'>В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game 2 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="games/gta.webp" alt="GTA V">
+            <div class="product-tags">
+              <span class="tag new">Новинка</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Grand Theft Auto V</h3>
+            <p class="product-desc">Криминальная сага в открытом мире</p>
+            <div class="product-price">
+              <span class="current-price">14 990 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart" onclick='addToCart({id:302, name:"Grand Theft Auto V", price:14990, quantity:1})'>В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game 3 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="games/ac.png" alt="Assassin's Creed Valhalla">
+            <div class="product-tags">
+              <span class="tag sale">-25%</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Assassin's Creed Valhalla</h3>
+            <p class="product-desc">Эпическое приключение в мире викингов</p>
+            <div class="product-price">
+              <span class="current-price">11 990 ₸</span>
+              <span class="old-price">15 990 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart" onclick="addToCart({id:303, name: 'Assassin\'s Creed Valhalla', price: 11990, quantity: 1})">В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game 4 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="games/cp.webp" alt="Cyberpunk 2077">
+          </div>
+          <div class="product-info">
+            <h3>Cyberpunk 2077</h3>
+            <p class="product-desc">Футуристическая RPG в мегаполисе будущего</p>
+            <div class="product-price">
+              <span class="current-price">16 990 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart" onclick='addToCart({id:304, name:"Cyberpunk 2077", price:16990, quantity:1})'>В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game 5 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="games/mc.webp" alt="Minecraft">
+            <div class="product-tags">
+              <span class="tag sale">-15%</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Minecraft</h3>
+            <p class="product-desc">Песочница с безграничными возможностями</p>
+            <div class="product-price">
+              <span class="current-price">7 490 ₸</span>
+              <span class="old-price">8 990 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart" onclick='addToCart({id:305, name:"Minecraft", price:7490, quantity:1})'>В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game 6 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="games/cod.jpg" alt="Call of Duty: Modern Warfare III">
+            <div class="product-tags">
+              <span class="tag new">Новинка</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Call of Duty: Modern Warfare III</h3>
+            <p class="product-desc">Шутер от первого лица</p>
+            <div class="product-price">
+              <span class="current-price">21 990 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart" onclick='addToCart({id:306, name:"Call of Duty: Modern Warfare III", price:21990, quantity:1})'>В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pagination">
+      <a href="#" class="active">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#" class="next">Следующая →</a>
+    </div>
+    <div class="sumwithdel">
+      <img src="imgs/deliv.png" alt="Доставка" id="deliv">
+      <p id="del">Доставляем во все точки QazPost Казахстана</p>
+    </div>
+  </div>
+
+  <!-- Скрипты подключаются в конце страницы -->
+  <script src="script.js"></script>
+  <script>
+    // Обработка переключения фильтров на мобильных устройствах
+    document.getElementById('filter-toggle').addEventListener('click', function() {
+      document.querySelector('.filters-content').classList.toggle('active');
+      this.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="headphones/headphones.css">
+  <title>Наушники - TechSum</title>
+</head>
+<body>
+  <div class="holder">
+    <header>
+      <a href="index.html" id="techform">TechSum</a>
+      <div class="headerholder">
+        <div class="sea">
+          <a href="search.html">
+            <img src="imgs/search.png" alt="Поиск" id="search">
+          </a>
+        </div>
+        <div class="double">
+          <a href="cart.html">
+            <img src="imgs/cart.png" alt="Корзина" id="cart">
+          </a>
+          <img src="imgs/burger.png" alt="Меню" id="burger">
+        </div>
+      </div>
+    </header>
+
+    <div class="category-header">
+      <h1>Наушники</h1>
+      <div class="filter-controls">
+        <select id="sort-by">
+          <option value="popular">По популярности</option>
+          <option value="price-low">Цена (низкая-высокая)</option>
+          <option value="price-high">Цена (высокая-низкая)</option>
+          <option value="newest">Новинки</option>
+        </select>
+        <div class="view-options">
+          <button class="view-btn active" data-view="grid">
+            <img src="imgs/grid-view.png" alt="Grid View">
+          </button>
+          <button class="view-btn" data-view="list">
+            <img src="imgs/list-view.png" alt="List View">
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="products-layout">
+      <div class="filters-sidebar">
+        <div class="filter-group">
+          <h3>Тип</h3>
+          <label><input type="checkbox" name="type" value="over-ear"> Накладные</label>
+          <label><input type="checkbox" name="type" value="in-ear"> Внутриканальные</label>
+          <label><input type="checkbox" name="type" value="on-ear"> Компактные</label>
+          <label><input type="checkbox" name="type" value="tws"> TWS</label>
+        </div>
+        <div class="filter-group">
+          <h3>Бренд</h3>
+          <label><input type="checkbox" name="brand" value="sony"> Sony</label>
+          <label><input type="checkbox" name="brand" value="sennheiser"> Sennheiser</label>
+          <label><input type="checkbox" name="brand" value="jbl"> JBL</label>
+          <label><input type="checkbox" name="brand" value="bose"> Bose</label>
+          <label><input type="checkbox" name="brand" value="apple"> Apple</label>
+          <label><input type="checkbox" name="brand" value="razer"> Razer</label>
+        </div>
+        <div class="filter-group">
+          <h3>Цена</h3>
+          <div class="price-range">
+            <input type="number" id="price-min" placeholder="От">
+            <span>-</span>
+            <input type="number" id="price-max" placeholder="До">
+            <button id="price-apply">OK</button>
+          </div>
+        </div>
+        <div class="filter-group">
+          <h3>Подключение</h3>
+          <label><input type="checkbox" name="connection" value="wired"> Проводные</label>
+          <label><input type="checkbox" name="connection" value="wireless"> Беспроводные</label>
+          <label><input type="checkbox" name="connection" value="bluetooth"> Bluetooth</label>
+        </div>
+        <div class="filter-group">
+          <h3>Особенности</h3>
+          <label><input type="checkbox" name="features" value="anc"> Шумоподавление</label>
+          <label><input type="checkbox" name="features" value="microphone"> Микрофон</label>
+          <label><input type="checkbox" name="features" value="hi-res"> Hi-Res Audio</label>
+        </div>
+        <button id="reset-filters">Сбросить фильтры</button>
+      </div>
+
+      <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="headphones/sony-wh.jpg" alt="Sony WH-1000XM5">
+            <div class="product-tags">
+              <span class="tag bestseller">Хит</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Sony WH-1000XM5</h3>
+            <p class="product-desc">Беспроводные наушники с шумоподавлением</p>
+            <div class="product-price">
+              <span class="current-price">199 990 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart" onclick='addToCart({id:201, name:"Sony WH-1000XM5", price:199990, quantity:1})'>В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="headphones/airpods.jpg" alt="Apple AirPods Pro 2">
+            <div class="product-tags">
+              <span class="tag new">Новинка</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Apple AirPods Pro 2</h3>
+            <p class="product-desc">TWS наушники с активным шумоподавлением</p>
+            <div class="product-price">
+              <span class="current-price">149 990 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart" onclick='addToCart({id:202, name:"Apple AirPods Pro 2", price:149990, quantity:1})'>В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="headphones/jbl-tune.jpg" alt="JBL Tune 510BT">
+            <div class="product-tags">
+              <span class="tag sale">-25%</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>JBL Tune 510BT</h3>
+            <p class="product-desc">Беспроводные накладные наушники</p>
+            <div class="product-price">
+              <span class="current-price">17 490 ₸</span>
+              <span class="old-price">24 990 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart" onclick='addToCart({id:203, name:"JBL Tune 510BT", price:17490, quantity:1})'>В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="headphones/semheizer.jpg" alt="Sennheiser HD 560S">
+          </div>
+          <div class="product-info">
+            <h3>Sennheiser HD 560S</h3>
+            <p class="product-desc">Аудиофильские открытые наушники</p>
+            <div class="product-price">
+              <span class="current-price">99 990 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart" onclick='addToCart({id:204, name:"Sennheiser HD 560S", price:99990, quantity:1})'>В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 5 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="headphones/bose.jpg" alt="Bose QuietComfort 45">
+            <div class="product-tags">
+              <span class="tag sale">-15%</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Bose QuietComfort 45</h3>
+            <p class="product-desc">Премиальные наушники с шумоподавлением</p>
+            <div class="product-price">
+              <span class="current-price">153 490 ₸</span>
+              <span class="old-price">179 990 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart" onclick='addToCart({id:205, name:"Bose QuietComfort 45", price:153490, quantity:1})'>В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 6 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="headphones/razer-blackshark.jpg" alt="Razer BlackShark V2 Pro">
+            <div class="product-tags">
+              <span class="tag new">Новинка</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Razer BlackShark V2 Pro</h3>
+            <p class="product-desc">Беспроводная игровая гарнитура</p>
+            <div class="product-price">
+              <span class="current-price">74 990 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart" onclick='addToCart({id:206, name:"Razer BlackShark V2 Pro", price:74990, quantity:1})'>В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pagination">
+      <a href="#" class="active">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#" class="next">Следующая →</a>
+    </div>
+
+    <div class="sumwithdel">
+      <img src="imgs/deliv.png" alt="Доставка" id="deliv">
+      <p id="del">Доставляем во все точки QazPost Казахстана</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

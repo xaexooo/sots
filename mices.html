@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mices/mice.css">
+  <title>Мыши - TechSum</title>
+</head>
+<body>
+  <div class="holder">
+    <header>
+      <a href="index.html" id="techform">TechSum</a>
+      <div class="headerholder">
+        <div class="sea">
+          <a href="search.html">
+            <img src="imgs/search.png" alt="Поиск" id="search">
+          </a>
+        </div>
+        <div class="double">
+          <a href="cart.html">
+            <img src="imgs/cart.png" alt="Корзина" id="cart">
+          </a>
+          <img src="imgs/burger.png" alt="Меню" id="burger">
+        </div>
+      </div>
+    </header>
+
+    <div class="category-header">
+      <h1>Мыши</h1>
+      <div class="filter-controls">
+        <select id="sort-by">
+          <option value="popular">По популярности</option>
+          <option value="price-low">Цена (низкая-высокая)</option>
+          <option value="price-high">Цена (высокая-низкая)</option>
+          <option value="newest">Новинки</option>
+        </select>
+        <div class="view-options">
+          <button class="view-btn active" data-view="grid">
+            <img src="imgs/grid-view.png" alt="Grid View">
+          </button>
+          <button class="view-btn" data-view="list">
+            <img src="imgs/list-view.png" alt="List View">
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="products-layout">
+      <div class="filters-sidebar">
+        <div class="filter-group">
+          <h3>Тип</h3>
+          <label><input type="checkbox" name="type" value="gaming"> Игровые</label>
+          <label><input type="checkbox" name="type" value="office"> Офисные</label>
+          <label><input type="checkbox" name="type" value="wireless"> Беспроводные</label>
+        </div>
+        <div class="filter-group">
+          <h3>Бренд</h3>
+          <label><input type="checkbox" name="brand" value="logitech"> Logitech</label>
+          <label><input type="checkbox" name="brand" value="razer"> Razer</label>
+          <label><input type="checkbox" name="brand" value="steelseries"> SteelSeries</label>
+          <label><input type="checkbox" name="brand" value="corsair"> Corsair</label>
+          <label><input type="checkbox" name="brand" value="hyperx"> HyperX</label>
+        </div>
+        <div class="filter-group">
+          <h3>Цена</h3>
+          <div class="price-range">
+            <input type="number" id="price-min" placeholder="От">
+            <span>-</span>
+            <input type="number" id="price-max" placeholder="До">
+            <button id="price-apply">OK</button>
+          </div>
+        </div>
+        <div class="filter-group">
+          <h3>DPI</h3>
+          <label><input type="checkbox" name="dpi" value="low"> До 3000</label>
+          <label><input type="checkbox" name="dpi" value="mid"> 3000-8000</label>
+          <label><input type="checkbox" name="dpi" value="high"> 8000-16000</label>
+          <label><input type="checkbox" name="dpi" value="ultra"> От 16000</label>
+        </div>
+        <button id="reset-filters">Сбросить фильтры</button>
+      </div>
+
+      <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="mices/logitech-superlight.png" alt="Logitech G Pro X Superlight">
+            <div class="product-tags">
+              <span class="tag bestseller">Хит</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Logitech G Pro X Superlight</h3>
+            <p class="product-desc">Беспроводная игровая мышь с весом всего 63г</p>
+            <div class="product-price">
+              <span class="current-price">74 490 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart" onclick='addToCart({id:101, name:"Logitech G Pro X Superlight", price:74490, quantity:1})'>В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="mices/razer-deathadder.jpg" alt="Razer DeathAdder V3 Pro">
+            <div class="product-tags">
+              <span class="tag new">Новинка</span>
+              <span class="tag sale">-20%</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Razer DeathAdder V3 Pro</h3>
+            <p class="product-desc">Эргономичная беспроводная мышь с сенсором 30K DPI</p>
+            <div class="product-price">
+              <span class="current-price">52 990 ₸</span>
+              <span class="old-price">65 990 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart" onclick='addToCart({id:102, name:"Razer DeathAdder V3 Pro", price:52990, quantity:1})'>В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="mices/steelseries-rival.jpg" alt="SteelSeries Rival 3">
+          </div>
+          <div class="product-info">
+            <h3>SteelSeries Rival 3</h3>
+            <p class="product-desc">Игровая мышь с RGB-подсветкой и 8500 CPI</p>
+            <div class="product-price">
+              <span class="current-price">16 990 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart" onclick='addToCart({id:103, name:"SteelSeries Rival 3", price:16990, quantity:1})'>В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="mices/corsair.avif" alt="Corsair Dark Core RGB Pro">
+            <div class="product-tags">
+              <span class="tag sale">-15%</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Corsair Dark Core RGB Pro</h3>
+            <p class="product-desc">Беспроводная игровая мышь с двойным подключением</p>
+            <div class="product-price">
+              <span class="current-price">34 990 ₸</span>
+              <span class="old-price">39 990 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart" onclick='addToCart({id:104, name:"Corsair Dark Core RGB Pro", price:34990, quantity:1})'>В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 5 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="mices/hyperx-pulsfire.jpg" alt="HyperX Pulsefire Haste">
+          </div>
+          <div class="product-info">
+            <h3>HyperX Pulsefire Haste</h3>
+            <p class="product-desc">Ультралегкая игровая мышь с сотовым корпусом</p>
+            <div class="product-price">
+              <span class="current-price">24 490 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart" onclick='addToCart({id:105, name:"HyperX Pulsefire Haste", price:24490, quantity:1})'>В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 6 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="mices/logitech-mx.jpg" alt="Logitech MX Master 3S">
+            <div class="product-tags">
+              <span class="tag new">Новинка</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Logitech MX Master 3S</h3>
+            <p class="product-desc">Премиальная беспроводная мышь для работы</p>
+            <div class="product-price">
+              <span class="current-price">74 990 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart" onclick='addToCart({id:106, name:"Logitech MX Master 3S", price:74990, quantity:1})'>В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pagination">
+      <a href="#" class="active">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#" class="next">Следующая →</a>
+    </div>
+
+    <div class="sumwithdel">
+      <img src="imgs/deliv.png" alt="Доставка" id="deliv">
+      <p id="del">Доставляем во все точки QazPost Казахстана</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

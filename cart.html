@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cart/cart.css">
+  <title>Корзина - TechSum</title>
+</head>
+<body>
+  <div class="holder">
+    <header>
+      <a href="index.html" id="techform">TechSum</a>
+      <div class="headerholder">
+        <div class="sea">
+          <a href="search.html">
+            <img src="imgs/search.png" alt="Поиск" id="search">
+          </a>
+        </div>
+        <div class="double">
+          <a href="cart.html">
+            <img src="imgs/cart.png" alt="Корзина" id="cart">
+          </a>
+          <img src="imgs/burger.png" alt="Меню" id="burger">
+        </div>
+      </div>
+    </header>
+    <div class="cart-container">
+      <h1>Ваша корзина</h1>
+      <div id="cart-items">
+      </div>
+      <div class="cart-summary">
+        <span id="total-price">Итого: 0 ₸</span>
+      </div>
+      <div class="cart-actions">
+        <button id="clear-cart" class="clear-cart">Очистить корзину</button>
+        <button id="checkout" class="checkout">Оформить заказ</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="cart/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+/* Основной блок детальной страницы товара */
+.product-detail {
+    display: flex;
+    gap: 40px;
+    margin: 40px 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffffff1a, #ffffff00);
+    border: 1px solid #ffffff2e;
+    box-shadow: 0 5px 20px 0 #0000005e;
+    border-radius: 20px;
+  }
+  
+  /* Секция с изображением товара */
+  .product-image-detail {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .product-image-detail img {
+    max-width: 100%;
+    border-radius: 20px;
+  }
+  
+  /* Секция с информацией о товаре */
+  .product-info-detail {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .product-info-detail h1 {
+    font-family: 'Bahnschrift';
+    font-size: 28px;
+    color: white;
+  }
+  
+  .product-desc-detail {
+    font-family: 'Bahnschrift';
+    font-size: 16px;
+    color: #ccc;
+    line-height: 1.5;
+  }
+  
+  .product-price-detail {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .current-price {
+    font-family: 'Bahnschrift';
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .old-price {
+    font-family: 'Bahnschrift';
+    font-size: 18px;
+    color: #999;
+    text-decoration: line-through;
+  }
+  
+  /* Кнопка добавления в корзину */
+  .add-to-cart {
+    padding: 12px 20px;
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Bahnschrift';
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #3367D6;
+  }
+  
+  /* Секция отзывов */
+  .product-reviews {
+    margin: 40px 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffffff1a, #ffffff00);
+    border: 1px solid #ffffff2e;
+    box-shadow: 0 5px 20px 0 #0000005e;
+    border-radius: 20px;
+  }
+  
+  .product-reviews h2 {
+    font-family: 'Bahnschrift';
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .review {
+    margin-bottom: 15px;
+  }
+  
+  .review-author {
+    font-family: 'Bahnschrift';
+    font-size: 16px;
+    color: white;
+    margin-bottom: 5px;
+  }
+  
+  .review-text {
+    font-family: 'Bahnschrift';
+    font-size: 14px;
+    color: #ccc;
+  }
+  

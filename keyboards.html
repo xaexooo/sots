@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="keyboards/keyboards.css">
+  <title>Клавиатуры - TechSum</title>
+</head>
+<body>
+  <div class="holder">
+    <header>
+      <a href="index.html" id="techform">TechSum</a>
+      <div class="headerholder">
+        <div class="sea">
+          <a href="search.html">
+            <img src="imgs/search.png" alt="Поиск" id="search">
+          </a>
+        </div>
+        <div class="double">
+          <a href="cart.html">
+            <img src="imgs/cart.png" alt="Корзина" id="cart">
+          </a>
+          <img src="imgs/burger.png" alt="Меню" id="burger">
+        </div>
+      </div>
+    </header>
+    <div class="category-header">
+      <h1>Клавиатуры</h1>
+      <div class="filter-controls">
+        <select id="sort-by">
+          <option value="popular">По популярности</option>
+          <option value="price-low">Цена (низкая-высокая)</option>
+          <option value="price-high">Цена (высокая-низкая)</option>
+          <option value="newest">Новинки</option>
+        </select>
+        <div class="view-options">
+          <button class="view-btn active" data-view="grid">
+            <img src="imgs/grid-view.png" alt="Grid View">
+          </button>
+          <button class="view-btn" data-view="list">
+            <img src="imgs/list-view.png" alt="List View">
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="products-layout">
+      <div class="filters-sidebar">
+        <div class="filter-group">
+          <h3>Тип</h3>
+          <label><input type="checkbox" name="type" value="mechanical"> Механические</label>
+          <label><input type="checkbox" name="type" value="membrane"> Мембранные</label>
+          <label><input type="checkbox" name="type" value="optical"> Оптические</label>
+        </div>
+        <div class="filter-group">
+          <h3>Бренд</h3>
+          <label><input type="checkbox" name="brand" value="logitech"> Logitech</label>
+          <label><input type="checkbox" name="brand" value="razer"> Razer</label>
+          <label><input type="checkbox" name="brand" value="hyperx"> HyperX</label>
+          <label><input type="checkbox" name="brand" value="steelseries"> SteelSeries</label>
+          <label><input type="checkbox" name="brand" value="corsair"> Corsair</label>
+        </div>
+        <div class="filter-group">
+          <h3>Цена</h3>
+          <div class="price-range">
+            <input type="number" id="price-min" placeholder="От">
+            <span>-</span>
+            <input type="number" id="price-max" placeholder="До">
+            <button id="price-apply">OK</button>
+          </div>
+        </div>
+        <div class="filter-group">
+          <h3>Раскладка</h3>
+          <label><input type="checkbox" name="layout" value="full"> Полная</label>
+          <label><input type="checkbox" name="layout" value="tkl"> TKL</label>
+          <label><input type="checkbox" name="layout" value="60"> 60%</label>
+        </div>
+        <button id="reset-filters">Сбросить фильтры</button>
+      </div>
+      <!-- Сетка товаров -->
+      <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="keyboards/gprox.png" alt="Logitech G Pro X">
+            <div class="product-tags">
+              <span class="tag new">Новинка</span>
+              <span class="tag sale">-15%</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Logitech G Pro X</h3>
+            <p class="product-desc">Механическая игровая клавиатура с переключателями GX Blue</p>
+            <div class="product-price">
+              <span class="current-price">74 990 ₸</span>
+              <span class="old-price">89 990 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart" onclick='addToCart({id:1, name:"Logitech G Pro X", price:74990, quantity:1})'>В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="keyboards/razer-huntsman-mini.jpg" alt="Razer Huntsman Mini">
+            <div class="product-tags">
+              <span class="tag bestseller">Хит</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Razer Huntsman Mini</h3>
+            <p class="product-desc">60% оптико-механическая клавиатура с RGB-подсветкой</p>
+            <div class="product-price">
+              <span class="current-price">52 990 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart" onclick='addToCart({id:2, name:"Razer Huntsman Mini", price:52990, quantity:1})'>В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="keyboards/hyperx-alloy-origins.jpg" alt="HyperX Alloy Origins Core">
+          </div>
+          <div class="product-info">
+            <h3>HyperX Alloy Origins Core</h3>
+            <p class="product-desc">TKL механическая клавиатура с переключателями HyperX Red</p>
+            <div class="product-price">
+              <span class="current-price">56 990 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart" onclick='addToCart({id:3, name:"HyperX Alloy Origins Core", price:56990, quantity:1})'>В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="keyboards/steelseries-apex-pro.jpg" alt="SteelSeries Apex Pro">
+            <div class="product-tags">
+              <span class="tag sale">-20%</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>SteelSeries Apex Pro</h3>
+            <p class="product-desc">Механическая клавиатура с регулируемыми переключателями</p>
+            <div class="product-price">
+              <span class="current-price">86 990 ₸</span>
+              <span class="old-price">107 490 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart" onclick='addToCart({id:4, name:"SteelSeries Apex Pro", price:86990, quantity:1})'>В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 5 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="keyboards/corsair-k70-rgb.jpg" alt="Corsair K70 RGB">
+          </div>
+          <div class="product-info">
+            <h3>Corsair K70 RGB</h3>
+            <p class="product-desc">Полноразмерная механическая клавиатура с подсветкой RGB</p>
+            <div class="product-price">
+              <span class="current-price">123 490 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart" onclick='addToCart({id:5, name:"Corsair K70 RGB", price:123490, quantity:1})'>В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 6 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="keyboards/ducky-one-2mini.jpg" alt="Ducky One 2 Mini">
+            <div class="product-tags">
+              <span class="tag new">Новинка</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Ducky One 2 Mini</h3>
+            <p class="product-desc">60% механическая клавиатура с двойным PBT</p>
+            <div class="product-price">
+              <span class="current-price">59 990 ₸</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart" onclick='addToCart({id:6, name:"Ducky One 2 Mini", price:59990, quantity:1})'>В корзину</button>
+              <button class="quick-view">Быстрый просмотр</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pagination">
+      <a href="#" class="active">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#" class="next">Следующая →</a>
+    </div>
+    <div class="sumwithdel">
+      <img src="imgs/deliv.png" alt="Доставка" id="deliv">
+      <p id="del">Доставляем во все точки QazPost Казахстана</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="../cart.js"></script>
+</body>
+</html>

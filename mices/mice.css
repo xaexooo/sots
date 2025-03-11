@@ -350,6 +350,7 @@
     .filters-sidebar {
       width: 100%;
       margin-bottom: 20px;
+      display: none;
     }
     
     .products-grid {
@@ -370,11 +371,8 @@
   }
   
   @media (max-width: 480px) {
-    .products-grid {
-      grid-template-columns: 1fr;
-    }
-    
     .product-actions {
       flex-direction: column;
     }
+    .sumwithdel{height: 12%;}
   }

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Подключаем общий стиль проекта и дополнительный стиль для детальной страницы -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="product.css">
+  <title>Детальная страница товара - TechSum</title>
+</head>
+<body>
+  <div class="holder">
+    <!-- Шапка сайта -->
+    <header>
+      <a href="index.html" id="techform">TechSum</a>
+      <div class="headerholder">
+        <div class="sea">
+          <a href="search.html">
+            <img src="imgs/search.png" alt="Поиск" id="search">
+          </a>
+        </div>
+        <div class="double">
+          <a href="cart.html">
+            <img src="imgs/cart.png" alt="Корзина" id="cart">
+          </a>
+          <img src="imgs/burger.png" alt="Меню" id="burger">
+        </div>
+      </div>
+    </header>
+
+    <!-- Детальная информация о товаре -->
+    <div class="product-detail">
+      <div class="product-image-detail">
+        <img src="imgs/sample-product.jpg" alt="Название товара">
+      </div>
+      <div class="product-info-detail">
+        <h1>Название товара</h1>
+        <p class="product-desc-detail">
+          Подробное описание товара. Здесь можно указать характеристики, преимущества, состав, рекомендации по использованию и другую важную информацию, которая поможет пользователю принять решение о покупке.
+        </p>
+        <div class="product-price-detail">
+          <span class="current-price">12 990 ₸</span>
+          <span class="old-price">15 290 ₸</span>
+        </div>
+        <button class="add-to-cart" onclick="addToCart({id:701, name: 'Название товара', price:12990, quantity:1})">
+          В корзину
+        </button>
+      </div>
+    </div>
+
+    <!-- Раздел с отзывами -->
+    <div class="product-reviews">
+      <h2>Отзывы</h2>
+      <div class="review">
+        <p class="review-author">Иван Иванов</p>
+        <p class="review-text">Отличный товар! Рекомендую всем.</p>
+      </div>
+      <div class="review">
+        <p class="review-author">Петр Петров</p>
+        <p class="review-text">Качество на высоте, но немного завышена цена.</p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
